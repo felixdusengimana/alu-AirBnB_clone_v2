@@ -11,6 +11,7 @@ app = Flask(__name__)
 @app.route('/', strict_slashes=False)
 def hbnb():
     """
+    Routes that navigate to the root(base url)
     """
     return 'Hello HBNB!'
 
@@ -18,6 +19,7 @@ def hbnb():
 @app.route('/hbnb', strict_slashes=False)
 def index():
     """
+    Routes that navigation hnbb page
     """
     return 'HBNB'
 
@@ -25,6 +27,7 @@ def index():
 @app.route('/c/<text>', strict_slashes=False)
 def C_is(text):
     """
+    Route to text passed in route
     """
     return 'C is {:s}'.format(text.replace('_', ' '))
 
@@ -33,6 +36,7 @@ def C_is(text):
 @app.route('/python/<text>')
 def python(text):
     """
+    Route to python page with text value
     """
     return 'Python {:s}'.format(text.replace('_', ' '))
 
@@ -40,6 +44,7 @@ def python(text):
 @app.route('/number/<int:n>', strict_slashes=False)
 def number(n):
     """
+    Route to the nth value
     """
     return "{} is a number".format(n)
 
