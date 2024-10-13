@@ -19,7 +19,9 @@ def teardown_data(self):
 
 @app.route('/cities_by_states', strict_slashes=False)
 def cities_by_states():
-    """ return all citie in the db  """
+    """
+    return all citie in the db  
+    """
     states = storage.all(State)
 
     return render_template('8-cities_by_states.html', states=states)
